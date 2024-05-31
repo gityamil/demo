@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://www.example.org/Service/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://www.example.org/Service/">
+
+  <types>
+   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.org/Service/"
+           elementFormDefault="qualified">
+
+  <xsd:element name="GetMessageRequest" type="xsd:string" />
+  
+  <xsd:element name="GetMessageResponse" type="xsd:string" />
+
+</xsd:schema>
+  </types>
+
+  <message name="GetMessageRequest">
+    <part name="parameters" element="tns:GetMessageRequest"/>
+  </message>
+
+  <message name="GetMessageResponse">
+    <part name="parameters" element="tns:GetMessageResponse"/>
+  </message>
+
+  <portType name="MessagePortType">
+    <operation name="GetMessage">
+      <input message="tns:GetMessageRequest"/>
+      <output message="tns:GetMessageResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="MessageBinding" type="tns:MessagePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetMessage">
+      <soap:operation soapAction="http://www.example.org/Service/GetMessage"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="MessageService">
+    <port name="MessagePort" binding="tns:MessageBinding">
+      <soap:address location="http://www.example.org/Service/MessageService"/>
+    </port>
+  </service>
+
+</definitions>

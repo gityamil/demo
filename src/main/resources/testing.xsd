@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's
+version is JAX-WS RI 2.2-hudson-740-. -->
+<xsd:schema xmlns:tns="http://test/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+version="1.0"
+    targetNamespace="http://test/">
+
+    <xsd:element name="consultar" type="tns:consultar" />
+
+    <xsd:element name="consultarResponse" type="tns:consultarResponse" />
+
+    <xsd:element name="hello" type="tns:hello" />
+
+    <xsd:element name="helloResponse" type="tns:helloResponse" />
+
+    <xsd:element name="notificar" type="tns:notificar" />
+
+    <xsd:element name="notificarResponse" type="tns:notificarResponse" />
+
+    <xsd:element name="referenciar" type="tns:referenciar" />
+
+    <xsd:element name="referenciarResponse" type="tns:referenciarResponse" />
+
+    <xsd:complexType name="notificar">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="notificarResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="consultar">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="consultarResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="hello">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="helloResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="referenciar">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="referenciarResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

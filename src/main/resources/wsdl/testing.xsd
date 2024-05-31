@@ -1,0 +1,9 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.org/Service/"
+           elementFormDefault="qualified">
+
+  <xsd:element name="GetMessageRequest" type="xsd:string" />
+  
+  <xsd:element name="GetMessageResponse" type="xsd:string" />
+
+</xsd:schema>
